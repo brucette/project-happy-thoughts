@@ -1,13 +1,138 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  margin: 0 auto;
+  width: 90vw;
+  border: 2px green solid;
+  box-sizing: border-box;
+  /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif;*/
+    font-family: 'Trispace', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+main {
+  margin: 1rem 0.5rem;
+}
+
+.form {
+  margin: 1rem 0;
+  box-shadow: 5px 5px;
+  border: 2px solid #7C7C7C;
+  background-color: #F2F0F0;
+  padding: 1rem;
+}
+
+.thoughtCard {
+  margin: 1rem 0;
+  box-shadow: 5px 5px;
+  border: 2px solid #7C7C7C;
+  padding: 1rem;
+}
+
+.userInput {
+  border: C9C9C9 solid 1 px;
+  height: 3rem;
+  width: 98%;
+}
+
+.submitBtn {
+  padding: 0.5rem;
+  margin: 0.8rem 0;
+  display: block;
+  border-radius: 1rem;
+  background-color: #FFAEAD;
+  border: 0px;
+}
+
+.heartBtn {
+  width: 3rem;
+  height: 3rem;
+  background-color: #F2F0F0;
+  border-radius: 50%;
+  border: 0px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px red solid; */
+  color: #7C7C7C;
+}
+
+/* TABLET */
+@media (min-width: 668px) and (max-width: 1024px) {
+
+}
+
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+  body {
+    width: 25vw;
+  }
+
+  main {
+    width: 100%;
+  }
+  
+  .form {
+    display: inline-block;
+  }
+  
+  .thoughtCard {
+    margin: 1rem 0;
+    box-shadow: 5px 5px;
+    width: 20vw;
+    border: 2px solid #7C7C7C;
+    padding: 1rem;
+    width: 100%;
+  }
+  
+  section {
+    border: 2px solid #7C7C7C;
+    background-color: #F2F0F0;
+    box-shadow: 5px 5px;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+  
+  .userInput {
+    border: C9C9C9 solid 1 px;
+    height: 3rem;
+    width: 98%;
+  }
+  
+  .submitBtn {
+    padding: 0.5rem;
+    margin: 0.8rem 0;
+    display: block;
+    border-radius: 1rem;
+    background-color: #FFAEAD;
+    border: 0px;
+  }
+  
+  .heartBtn {
+    width: 2rem;
+    height: 2rem;
+    background-color: #F2F0F0;
+    border-radius: 50%;
+    border: 0px;
+  }
+  
+  .cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px red solid;
+    color: #7C7C7C;
+  }
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { ThoughtForm } from 'drafts/ThoughtForm';
-import { ThoughtList } from 'drafts/ThoughtList';
+import { ThoughtForm } from 'components/ThoughtForm';
+import { ThoughtList } from 'components/ThoughtList';
 
 export const App = () => {
   const [thoughtList, setThoughtList] = useState([]);
@@ -63,22 +63,34 @@ export const App = () => {
     setNewThought(event.target.value)
   }
 
-  // Function to stop form immediately reloading page once a submission is made:
+  // eslint-disable-next-line max-len
+  // Function to stop form immediately reloading page (and resetting all variables e.g.) once a submission is made:
   const onFormSubmit = (event) => {
-    event.preveventDefault();
+    event.preventDefault();
 
-    // This is for ???? when posting user's enter message TO the API
+    // This is needed for posting user's entered message TO the API
     const options = {
       method: 'POST',
       body: JSON.stringify({
         message: newThought
-      })
+      }),
+      headers: {
+        // eslint-disable-next-line max-len
+        // Sending a json file or application to the backend (get his info from the API's documentation):
+        'Content-Type': 'application/json'
+      }
     }
 
     fetch('https://happy-thoughts-technigo.herokuapp.com/thoughts', options)
       .then((res) => res.json())
       .then(() => fetchThoughts())
       .finally(() => setNewThought(''));
+  }
+
+  if (loading) {
+    return (
+      <p>PAGE IS LOADING...</p>
+    )
   }
 
   return (

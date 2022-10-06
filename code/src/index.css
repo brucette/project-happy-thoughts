@@ -59,6 +59,10 @@ main {
   border: 0px;
 }
 
+.submitBtn:hover, .heartBtn:hover {
+  transform: scale(1.1);
+}
+
 .cardFooter {
   display: flex;
   justify-content: space-between;

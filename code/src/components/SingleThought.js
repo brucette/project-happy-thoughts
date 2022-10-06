@@ -22,10 +22,10 @@ export const SingleThought = ({ message, hearts, createdAt, _id }) => {
       <div className="cardFooter">
         <div>
           <button
-            className="heartBtn"
             hearts={singleThoughthearts}
             type="button"
-            onClick={handleLikeBtnClick}>
+            onClick={handleLikeBtnClick}
+            className={hearts === 0 ? 'heartBtn' : 'heartBtn pink'}>
             {/* &#128151; */}❤️
           </button>
           &nbsp; x {singleThoughthearts}&nbsp;

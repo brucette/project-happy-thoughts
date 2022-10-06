@@ -1,7 +1,7 @@
 import React from 'react';
 import { SingleThought } from 'components/SingleThought';
 
-export const ThoughtList = ({ loading, thoughtList, setThoughtList }) => {
+export const ThoughtList = ({ loading, thoughtList }) => {
   if (loading) {
     return <h2>Loading in progress...</h2>
   }
@@ -14,7 +14,8 @@ export const ThoughtList = ({ loading, thoughtList, setThoughtList }) => {
           message={thought.message}
           hearts={thought.hearts}
           createdAt={thought.createdAt}
-          _id={thought.id} />
+          // eslint-disable-next-line no-underscore-dangle
+          _id={thought._id} />
       </div>
     ))
   )

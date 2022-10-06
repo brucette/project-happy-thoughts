@@ -136,7 +136,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 2px red solid;
     color: #7C7C7C;
   }
 }

@@ -8,41 +8,6 @@ export const App = () => {
   const [loading, setLoading] = useState(false);
   const [newThought, setNewThought] = useState('');
 
-  /* const [selectedPokemon, setSelectedPokemon] = useState();
-  const [pokemons, setPokemons] = useState([]);
- const [visible, setVisible] = useState(false);
-  useEffect(() => {
-   /* console.log('app effect:', visible); */
-  /* console.log('app change');
-  }, [visible]);
-
-  return (
-    <div>
-      <button type="button" onClick={() => setVisible(prev => !prev)}>Show/Hide</button>
-      {visible && <Hello />}
-    </div>
-  ); 
-
-  useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon')
-      .then(res => res.json())
-      .then(json => setPokemons(json.results));
-      console.log(pokemons)
-  }, [])
-  return (
-    <div>
-      <ul>
-        {pokemons.map(pokemon => {
-          return (
-            <li key={pokemon.name}>
-              <button onClick={() => setSelectedPokemon(pokemon)}>{pokemon.name}</button>
-            </li>
-          );
-        })}
-      </ul>
-
-      {selectedPokemon && <Detail name={selectedPokemon.name} url={selectedPokemon.url} />}*/
-
   // Function to get the thoughts currently in the API:
   const fetchThoughts = () => {
     setLoading(true);
@@ -63,8 +28,8 @@ export const App = () => {
     setNewThought(event.target.value)
   }
 
-  // eslint-disable-next-line max-len
-  // Function to stop form immediately reloading page (and resetting all variables e.g.) once a submission is made:
+  /* Function to stop form immediately reloading page (and resetting all variables e.g.)
+   once a submission is made: */
   const onFormSubmit = (event) => {
     event.preventDefault();
 
@@ -75,8 +40,8 @@ export const App = () => {
         message: newThought
       }),
       headers: {
-        // eslint-disable-next-line max-len
-        // Sending a json file or application to the backend (get his info from the API's documentation):
+        /* Sending a json file or application to the backend
+        (get his info from the API's documentation): */
         'Content-Type': 'application/json'
       }
     }

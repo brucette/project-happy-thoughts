@@ -4,7 +4,6 @@ import { ThoughtList } from 'components/ThoughtList';
 
 export const App = () => {
   const [thoughtList, setThoughtList] = useState([]);
-  console.log('APP THOUGHTLIST:', thoughtList)
   const [loading, setLoading] = useState(false);
   const [newThought, setNewThought] = useState('');
 
@@ -28,7 +27,7 @@ export const App = () => {
     setNewThought(event.target.value)
   }
 
-  /* Function to stop form immediately reloading page (and resetting all variables e.g.)
+  /* Function to stop form immediately reloading page (and resetting all variables)
    once a submission is made: */
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -45,7 +44,7 @@ export const App = () => {
         'Content-Type': 'application/json'
       }
     }
-
+    // Post user's message to the API
     fetch('https://happy-thoughts-technigo.herokuapp.com/thoughts', options)
       .then((res) => res.json())
       .then(() => fetchThoughts())
@@ -68,7 +67,8 @@ export const App = () => {
       <ThoughtList
         loading={loading}
         thoughtList={thoughtList}
-        setThoughtList={setThoughtList} />
+        setThoughtList={setThoughtList}
+        fetchThoughts={fetchThoughts} />
     </main>
   );
 };

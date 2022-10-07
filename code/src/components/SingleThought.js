@@ -13,25 +13,24 @@ export const SingleThought = ({ message, hearts, createdAt, _id }) => {
       headers: { 'Content-Type': 'application/json' }
     })
       // Then increase the local likes with one:
-      .then(setSingleThoughtHearts(hearts += 1));
+      .then(setSingleThoughtHearts(hearts += 1))
   }
 
   return (
     <>
-      <h4>{message}</h4>
+      <p className="message">{message}</p>
       <div className="cardFooter">
         <div>
           <button
             hearts={singleThoughthearts}
             type="button"
             onClick={handleLikeBtnClick}
-            className={hearts === 0 ? 'heartBtn' : 'heartBtn pink'}>
-            {/* &#128151; */}❤️
+            className={singleThoughthearts === 0 ? 'heartBtn' : 'heartBtn pink'}>
+            ❤️
           </button>
           &nbsp; x {singleThoughthearts}&nbsp;
         </div>
         <div>
-          {/* formatDistance(new Date(createdAt), Date.now(), { addSuffix: true }) */}
           <Moment fromNow>{createdAt}</Moment>
         </div>
       </div>

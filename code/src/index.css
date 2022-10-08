@@ -32,6 +32,7 @@ main {
   border: 2px solid #7C7C7C;
   background-color: white;
   padding: 1rem;
+  overflow: auto;
 }
 
 .userInput {

@@ -1,13 +1,14 @@
 # Happy Thoughts
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This assignment involves fetching and posting data into an API from React, putting data into a state and using the 'useEffect' hook in React to perform actions when components mount, unmount, or when state changes.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I initially made the example project provided for the week and once that was working I started to implement the happy-thoughts project with the same template, having a thoughtsList component and a thoughtForm component. I then realised that in order to keep count of the likes for each individual thought, I would need a third separate component with a counter that did that.
+
+I still need to make the form also submit with the press of the enter-button, not just the click of the submit button. With more time I would also implement a countdown counter for the amount of character's the user has entered.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://dapper-croquembouche-c4091f.netlify.app/
+

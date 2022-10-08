@@ -6,6 +6,7 @@ export const ThoughtForm = ({ onFormSubmit, newThought, handleNewThought }) => {
       <form onSubmit={onFormSubmit}>
         <h4>What&apos;s making you happy right now?</h4>
         <textarea
+          placeholder="Enter your message here.."
           rows={3}
           minLength="5"
           maxLength="140"

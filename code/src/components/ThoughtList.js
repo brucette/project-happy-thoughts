@@ -6,6 +6,7 @@ export const ThoughtList = ({ loading, thoughtList }) => {
     return <h2>Loading in progress...</h2>
   }
 
+  // Map through all the thoughts currently in the API & display them in a div:
   return (
     thoughtList.map((thought) => (
       // eslint-disable-next-line no-underscore-dangle
@@ -18,5 +19,5 @@ export const ThoughtList = ({ loading, thoughtList }) => {
           _id={thought._id} />
       </div>
     ))
-  )
-}
+  );
+};

@@ -12,10 +12,10 @@ export const SingleThought = ({ message, hearts, createdAt, _id }) => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' }
     })
-      // Then increase the local likes with one:
+      // Then increase the local like count with one:
       .then(setSingleThoughtHearts(hearts += 1))
-  }
-
+  };
+  // Extract info for a single thought in the list of all thoughts in the API & display in a div:
   return (
     <>
       <p className="message">{message}</p>
@@ -35,5 +35,5 @@ export const SingleThought = ({ message, hearts, createdAt, _id }) => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};

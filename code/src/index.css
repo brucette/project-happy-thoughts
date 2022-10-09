@@ -49,6 +49,7 @@ main {
   border-radius: 1rem;
   background-color: #FFAEAD;
   border: 0px;
+  color: black;
 }
 
 .heartBtn {

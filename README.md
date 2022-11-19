@@ -4,10 +4,12 @@ This assignment involves fetching and posting data into an API from React, putti
 
 ## The problem
 
-I initially made the example project provided for the week and once that was working I started to implement the happy-thoughts project with the same template, having a thoughtsList component and a thoughtForm component. I then realised that in order to keep count of the likes for each individual thought, I would need a third separate component with a counter that did that.
+I started with making a ThoughtsList component that maps through all the thoughts currently in the API and displays them, followed by a ThoughtForm component that displays a form for the user to enter their own happy tought. 
+
+I then realised that in order to keep count of the likes for each individual thought, I would need a third separate component with a counter that did that.
 
 With more time I would implement a countdown counter for the amount of character's the user has entered.
 
 ## View it live
 
-https://dapper-croquembouche-c4091f.netlify.app/
+https://happy-thoughts.brucette.com/

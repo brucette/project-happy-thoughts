@@ -10,7 +10,7 @@ export const App = () => {
   // Function to get the thoughts currently in the API:
   const fetchThoughts = () => {
     setLoading(true);
-    fetch('https://happy-thoughts-technigo.herokuapp.com/thoughts')
+    fetch('https://project-happy-thoughts-api-d6aenh5q2a-lz.a.run.app/thoughts') // 'https://happy-thoughts-technigo.herokuapp.com/thoughts')
       .then((res) => res.json())
       .then((json) => setThoughtList(json))
       .catch((error) => console.error(error))
@@ -45,7 +45,7 @@ export const App = () => {
       }
     }
     // Post user's message to the API
-    fetch('https://happy-thoughts-technigo.herokuapp.com/thoughts', options)
+    fetch('https://project-happy-thoughts-api-d6aenh5q2a-lz.a.run.app/thoughts', options)
       .then((res) => res.json())
       .then(() => fetchThoughts())
       .finally(() => setNewThought(''));

@@ -8,7 +8,7 @@ export const SingleThought = ({ message, hearts, createdAt, _id }) => {
   // Function for likes:
   const handleLikeBtnClick = () => {
     // Post a like to the API
-    fetch(`https://happy-thoughts-technigo.herokuapp.com/thoughts/${_id}/like`, {
+    fetch(`https://project-happy-thoughts-api-d6aenh5q2a-lz.a.run.app/thoughts/${_id}/like`, { // https://happy-thoughts-technigo.herokuapp.com/thoughts/${_id}/like`
       method: 'POST',
       headers: { 'Content-Type': 'application/json' }
     })

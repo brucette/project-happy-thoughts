@@ -9,7 +9,7 @@ export const SingleThought = ({ message, hearts, createdAt, _id }) => {
   const handleLikeBtnClick = () => {
     // Post a like to the API
     fetch(`https://project-happy-thoughts-api-d6aenh5q2a-lz.a.run.app/thoughts/${_id}/like`, { // https://happy-thoughts-technigo.herokuapp.com/thoughts/${_id}/like`
-      method: 'POST',
+      method: 'PATCH',
       headers: { 'Content-Type': 'application/json' }
     })
       // Then increase the local like count with one:

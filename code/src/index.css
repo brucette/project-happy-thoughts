@@ -18,6 +18,11 @@ main {
   box-sizing: border-box;
 }
 
+.notify {
+  margin: 50vh auto;
+  width: 90vw;
+}
+
 .form {
   margin: 1rem 0;
   box-shadow: 5px 5px;
@@ -32,7 +37,7 @@ main {
   border: 2px solid #7C7C7C;
   background-color: white;
   padding: 1rem;
-  overflow: auto;
+  word-break: break-all;
 }
 
 .userInput {
@@ -80,11 +85,18 @@ main {
   main {
     width: 70vw;
   }
+  .notify {
+    width: 70vw;
+  }
 }
 
 /* DESKTOP */
 @media (min-width: 1025px) {
   main {
+    width: 35vw
+    ;
+  }
+  .notify {
     width: 35vw;
   }
 }

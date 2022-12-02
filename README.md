@@ -4,12 +4,13 @@ This assignment involves fetching and posting data into an API from React, putti
 
 ## The problem
 
-I started with making a ThoughtsList component that maps through all the thoughts currently in the API and displays them, followed by a ThoughtForm component that displays a form for the user to enter their own happy tought. 
-
-I then realised that in order to keep count of the likes for each individual thought, I would need a third separate component with a counter that did that.
-
-With more time I would implement a countdown counter for the amount of character's the user has entered.
+I started with making a ThoughtsList component that maps through all the thoughts currently in the API and displays them, followed by a ThoughtForm component that displays a form for the user to enter their own happy tought, which is them added to the list.
 
 ## View it live
 
 https://happy-thoughts.brucette.com/
+
+
+Backend API built and connected to this frontend project later on: 
+https://project-happy-thoughts-api-d6aenh5q2a-lz.a.run.app
+

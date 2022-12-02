@@ -6,7 +6,6 @@ export const Thoughts = () => {
   const [thoughtList, setThoughtList] = useState([]);
   const [loading, setLoading] = useState(false);
   const [newThought, setNewThought] = useState('');
-  // const [singleThoughthearts, setSingleThoughtHearts] = useState();
 
   // Function to get the thoughts currently in the API:
   const fetchThoughts = () => {
@@ -20,7 +19,7 @@ export const Thoughts = () => {
   // Get all the thoughts already in the API as App loads:
   useEffect(() => {
     setLoading(true);
-    fetchThoughts();
+    setTimeout(() => { fetchThoughts(); }, 1500);
   }, []);
 
   // Sets the variable newThought to what the user has typed in the form:
@@ -62,17 +61,6 @@ export const Thoughts = () => {
       .then(() => fetchThoughts())
   };
 
-  if (loading) {
-    return (
-      <p className="notify">PAGE IS LOADING...</p>
-    )
-  }
-  if (thoughtList.length === 0) {
-    return (
-      <p className="notify">Service currently unavailable...Please try again later.</p>
-    )
-  }
-
   return (
     <main>
       <ThoughtForm
@@ -81,6 +69,7 @@ export const Thoughts = () => {
         handleNewThought={handleNewThought} />
 
       <ThoughtList
+        loading={loading}
         thoughtList={thoughtList}
         setThoughtList={setThoughtList}
         fetchThoughts={fetchThoughts}

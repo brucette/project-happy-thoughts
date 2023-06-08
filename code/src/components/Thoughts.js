@@ -19,7 +19,7 @@ export const Thoughts = () => {
   // Get all the thoughts already in the API as App loads:
   useEffect(() => {
     setLoading(true);
-    setTimeout(() => { fetchThoughts(); }, 1500);
+    setTimeout(() => { fetchThoughts(); }, 500);
   }, []);
 
   // Sets the variable newThought to what the user has typed in the form:
